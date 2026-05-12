@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Lovely Staff</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="icon" type="image/png" href="lochquarry_photographs/icons/Icon_Light.png">
+    </head>
+
+    <body>
+        <nav>
+            <div class="topnav">
+
+                <a href="index.html" class="logo">
+                    <img class="logo-default" src="lochquarry_photographs/icons/Icon_Light.png" alt="Lochquarry Logo Light">
+                    <img class="logo-hover" src="lochquarry_photographs/icons/Icon_Dark.png" alt="Lochquarry Logo Dark">
+                </a>
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <div class="dropdown">
+                    <a href="Activities.html">Activities</a>
+                    <div class="dropdown-content">
+                        <a href="Land.html">Land Based</a>
+                        <a href="Rope.html">Rope Based</a>
+                        <a href="Water.html">Water Based</a>
+                    </div>
+                </div>
+
+                <a href="Bookings.html">Bookings</a>
+                <a href="Staff.html">Staff</a>
+
+            </div>
+        </nav>
+
+        <div class="hero-band staff-banner">
+            <div class="page-logo">
+              <img class="page-logo-default" src="lochquarry_photographs/icons/Logo_Noback_Dark_2.png" alt="">
+              <img class="page-logo-hover" src="lochquarry_photographs/icons/Logo_Noback_Light.png" alt="">
+            </div>
+            <h1 class="hero-title">Meet the Team</h1>
+        </div>
+        
+        <section class="staff-grid">
+
+            <div class="staff-card">
+              <img src="lochquarry_photographs\staff\claire_jack.jpeg" alt="Claire Jack">
+              <h3>Claire Jack</h3>
+              <p class="staff-role">Centre Manager</p>
+              <p>
+                Responsible for the overall running of the centre and all of its activities.
+              </p>
+              <p class="favourite">
+                Favourite activity: Pole climb
+              </p>
+            </div>
+          
+            <div class="staff-card">
+              <img src="lochquarry_photographs\staff\robbie_elliot.jpeg" alt="Robbie Elliot">
+              <h3>Robbie Elliot</h3>
+              <p class="staff-role">Senior Instructor (Land)</p>
+              <p>
+                Oversees all land-based activities at the centre.
+              </p>
+              <p class="favourite">
+                Favourite activity: Hillwalking
+              </p>
+            </div>
+          
+            <div class="staff-card">
+              <img src="lochquarry_photographs\staff\marion_hunter.jpg" alt="Marion Hunter">
+              <h3>Marion Hunter</h3>
+              <p class="staff-role">Centre Administrator</p>
+              <p>
+                Responsible for making bookings and arranging activity slots for groups.
+              </p>
+              <p class="favourite">
+                Favourite activity: Making sure everyone has a great time
+              </p>
+            </div>
+          
+          </section>
+
+        <h2>Customer Review</h2>
+        <div class="card" data-tilt>
+            <p class="review-text">“Thank you to all the staff who worked so hard, in awful weather, to make sure that all the pupils had an amazing experience”</p>
+            <p class="review-author"> − Mrs Kahn, Hillend Primary School</p>
+        </div>
+
+        <footer>
+             <p>© Lochquarry Outdoor Centre. ALL RIGHTS RESERVED</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+        <script>
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+        </script>
+    </body>
+</html>

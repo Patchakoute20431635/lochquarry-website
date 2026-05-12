@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookings</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="icon" type="image/png" href="lochquarry_photographs/icons/Icon_Light.png">
+        <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav>
+            <div class="topnav">
+
+                <a href="index.html" class="logo">
+                    <img class="logo-default" src="lochquarry_photographs/icons/Icon_Light.png" alt="Lochquarry Logo Light">
+                    <img class="logo-hover" src="lochquarry_photographs/icons/Icon_Dark.png" alt="Lochquarry Logo Dark">
+                </a>
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <div class="dropdown">
+                    <a href="Activities.html">Activities</a>
+                    <div class="dropdown-content">
+                        <a href="Land.html">Land Based</a>
+                        <a href="Rope.html">Rope Based</a>
+                        <a href="Water.html">Water Based</a>
+                    </div>
+                </div>
+
+                <a href="Bookings.html">Bookings</a>
+                <a href="Staff.html">Staff</a>
+            </div>
+        </nav>
+
+        <div class="hero-band bookings-banner">
+            <div class="page-logo">
+              <img class="page-logo-default" src="lochquarry_photographs/icons/Logo_Noback_Dark_2.png" alt="">
+              <img class="page-logo-hover" src="lochquarry_photographs/icons/Logo_Noback_Light.png" alt="">
+            </div>
+            <h1 class="hero-title">Bookings</h1>
+        </div>
+        
+        <p><b>To book your next adventure at Lochquarry, please phone 01475 229 8311, or use our interactive booking calendar below!</b></p>
+
+        <h2>Book Your Visit</h2>
+
+    <div id="calendar"></div>
+
+    <p id="booking-message">Please select a date to check availability.</p>
+
+        
+    <button id="accept-booking">
+        Accept Booking
+    </button>
+    
+    <p id="booking-confirmation"></p>
+  
+
+        <h2>Customer Review</h2>
+        <div class="card" data-tilt>
+            <p class="review-text">“I would definitely come back”</p>
+            <p class="review-author"> − Kelly, aged 9</p>
+        </div>
+
+        <footer>
+             <p>© Lochquarry Outdoor Centre. ALL RIGHTS RESERVED</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+        <script>
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const calendarEl = document.getElementById('calendar');
+            const message = document.getElementById('booking-message');
+        
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+              initialView: 'dayGridMonth',
+              height: 'auto',
+              selectable: true,
+        
+              dateClick: function (info) {
+                message.textContent = `Selected booking date: ${info.dateStr}`;
+              }
+            });
+        
+            calendar.render();
+          });
+        </script>
+    </body>
+</html>

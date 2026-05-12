@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activities</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="icon" type="image/png" href="lochquarry_photographs/icons/Icon_Light.png">
+    </head>
+
+    <body>
+        <nav>
+            <div class="topnav">
+
+                <a href="index.html" class="logo">
+                    <img class="logo-default" src="lochquarry_photographs/icons/Icon_Light.png" alt="Lochquarry Logo Light">
+                    <img class="logo-hover" src="lochquarry_photographs/icons/Icon_Dark.png" alt="Lochquarry Logo Dark">
+                </a>
+
+                <a href="index.html">Home</a>
+                <a href="About.html">About</a>
+                <div class="dropdown">
+                    <a href="Activities.html">Activities</a>
+                    <div class="dropdown-content">
+                        <a href="Land.html">Land Based</a>
+                        <a href="Rope.html">Rope Based</a>
+                        <a href="Water.html">Water Based</a>
+                    </div>
+                </div>
+
+                <a href="Bookings.html">Bookings</a>
+                <a href="Staff.html">Staff</a>
+
+            </div>
+        </nav>
+
+        <div class="hero-band activities-banner">
+            <div class="page-logo">
+              <img class="page-logo-default" src="lochquarry_photographs/icons/Logo_Noback_Dark_2.png" alt="">
+              <img class="page-logo-hover" src="lochquarry_photographs/icons/Logo_Noback_Light.png" alt="">
+            </div>
+            <h1 class="hero-title">Our Activities</h1>
+        </div>
+
+
+        <div class="activity-panels">
+
+            <a href="Land.html" class="panel land">
+                <div class="panel-title">Land Based</div></a>
+
+            <a href="Rope.html" class="panel rope">
+                <div class="panel-title">Rope Based</div>
+            </a>
+
+            <a href="Water.html" class="panel water">
+                <div class="panel-title">Water Based</div>
+            </a>
+
+        </div>
+
+        <h2>Customer Review</h2>
+        <div class="card" data-tilt>
+            <p class="review-text">“We had a great time and loved all the different activities that we did”</p>
+            <p class="review-author"> − 8th Gourock Guides</p>
+        </div>
+
+        <footer>
+             <p>© Lochquarry Outdoor Centre. ALL RIGHTS RESERVED</p>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+        <script>
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+        </script>
+    </body>
+</html>
