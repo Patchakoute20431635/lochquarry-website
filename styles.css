@@ -1,0 +1,565 @@
+html, body {
+    background-color: linen;
+    font-family: Garamond, Georgia, Cambria, Cochin;
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    color:rgb(130, 90, 90);
+    text-align: center;
+    font-weight: 900;
+}
+
+h2 {
+    color:rgb(130, 90, 90);
+    text-align: center;             
+}
+
+h3 {
+    color:rgb(130, 90, 90);
+    text-align: center;             
+}
+
+
+h4 {
+    color:rgb(130, 90, 90);
+    text-align: center;
+}
+
+
+p {
+    color:rgb(130, 90, 90);
+    text-align: center;
+}
+
+a {
+    color: rosybrown;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li {
+    display: inline;
+    margin-right: 30px;
+    margin-left: 30px;
+    /* start with this, nav  bar borders/buttons*/
+}
+
+.hero-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 200px;   /* adjust size */
+    width: auto;
+    z-index: 10;
+}
+
+.hero-logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Default: dark mountains visible */
+.hero-logo-default {
+    opacity: 0.8;
+}
+
+/* Hover version hidden initially */
+.hero-logo-hover {
+    opacity: 0;
+}
+
+/* Swap on hover */
+.hero-logo:hover .hero-logo-default {
+    opacity: 0;
+}
+
+.hero-logo:hover .hero-logo-hover {
+    opacity: 0.8;
+}
+
+
+/* The hero image */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../lochquarry_photographs/nature/nature_5.jpg");
+    height: 60%;
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-title {
+    color: floralwhite;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 900;
+    z-index: 2;
+  }
+  
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: floralwhite;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: rosybrown;
+  background-color:floralwhite;
+  text-align: center;
+  cursor: pointer;
+  font-family: Garamond, Georgia, Cambria, Cochin;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.hero-text button:hover {
+  background-color: #536c54;
+  color: floralwhite;
+  font-family: Garamond, Georgia, Cambria, Cochin;
+}
+
+.hero-text button:hover a {
+    color: floralwhite;
+}
+
+  
+/* NAV BAR */
+.topnav {
+  background-color: #333;
+  overflow: visible;        /* allow dropdown to extend */
+  height: 50px;             /* prevents collapse when floats are used */
+  line-height: 50px;        /* vertically centers text */
+  position: relative;
+  text-align: center;
+}
+
+/* Top-level nav links */
+.topnav > a:not(.logo) {
+  display: inline-block;
+  color: floralwhite;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 17px;
+  vertical-align: middle;
+}
+
+.logo {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px 0 40px; /* adjust these numbers */
+    position: relative;
+    vertical-align: middle;
+    background-color: transparent; /* ensures hover background works */
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 10px;                 /* anchor inside padding */
+    transform: translate(0, -50%);
+    transition: opacity 0.2s ease-in-out;
+}
+
+.logo-default { opacity: 1; }
+.logo-hover { opacity: 0; }
+
+.logo:hover .logo-default { opacity: 0; }
+.logo:hover .logo-hover { opacity: 1; }
+
+/* Dropdown container */
+.dropdown {
+  display: inline-block;    /* sits in line with other links */
+  position: relative;
+  vertical-align: middle;   /* fixes alignment */
+}
+
+/* Dropdown button (Activities) */
+.dropdown > a {
+  display: inline-block;    /* remove float */
+  color: floralwhite;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Dropdown panel */
+.dropdown-content {
+  display: none;            /* FIXED: no longer always visible */
+  position: absolute;
+  top: 48px;                
+  left: 0;
+  background-color: floralwhite;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: rosybrown;
+  text-decoration: none;
+  line-height: normal;
+}
+
+/* Hover behaviour */
+.topnav a:hover,
+.dropdown:hover > a {
+    background-color: floralwhite;
+    color: rosybrown;
+}
+
+.dropdown-content a:hover {
+  background-color: #536c54;
+  color: floralwhite;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.activity-panels {
+    display: flex;
+    height: 400px;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.activity-panels a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #333;
+    color: floralwhite;
+    border-radius: 10px;
+}
+
+
+.panel {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: flex 0.4s ease;
+}
+
+.panel:hover {
+    flex: 2; /* expands the hovered panel */
+}
+
+.panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.panel:hover::before {
+    transform: scale(1.1); /* zoom effect */
+}
+
+.panel-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: floralwhite;
+    text-shadow: 0 0 10px black;
+    z-index: 2;
+}
+
+/* Background images */
+.panel.land::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)),url("../lochquarry_photographs/nature/nature_1.jpg");
+}
+
+.panel.rope::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)),url("../lochquarry_photographs/activities/rope/climbing_2.jpg");
+}
+
+.panel.water::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)),url("../lochquarry_photographs/activities/water/powerboating_1.jpg");
+}
+.page-logo {
+    position: relative;
+    z-index: 2;          /* ensures logo is ABOVE banner */
+    width: 220px;
+    height: 220px;
+    margin: 0;           /* CRITICAL: banner controls spacing */
+}
+
+.page-logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.page-logo-default { opacity: 1; }
+.page-logo-hover  { opacity: 0; }
+
+.page-logo:hover .page-logo-default { opacity: 0; }
+.page-logo:hover .page-logo-hover  { opacity: 1; }
+
+.card {
+    width: 320px;
+    padding: 25px;
+  
+    background-color: #184374bb;
+    color:floralwhite;
+    opacity: 0.7;
+  
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  
+    text-align: center;
+    font-size: 1.6rem;
+    font-style: italic;
+  
+    margin: 40px auto;
+  }
+
+  .card p {
+    color: floralwhite;
+}
+  .review-text {
+    margin-bottom: 15px;
+  }
+  
+  .review-author {
+    font-size: 1.3rem;
+    opacity: 0.8;
+  }
+  #calendar {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  }
+  
+  .fc {
+    font-family: Garamond, Georgia, Cambria, Cochin;
+  }
+  
+  /* Calendar day cells */
+  .fc-daygrid-day {
+    cursor: pointer;
+  }
+  
+  /* Selected look */
+  .fc-daygrid-day.fc-day-today {
+    background-color: rgba(130, 90, 90, 0.15);
+  }
+  
+  #booking-message {
+    text-align: center;
+    font-weight: bold;
+    color: rosybrown;
+  }
+  #accept-booking {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-family: Garamond, Georgia, Cambria, Cochin;
+    background-color: #537953b4;
+    color: floralwhite;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+  }
+  
+  #accept-booking:enabled {
+    opacity: 1;
+  }
+  
+  #accept-booking:hover:enabled {
+    background-color: #505050;
+  }
+  
+  #booking-confirmation {
+    text-align: center;
+    color: rgb(130, 90, 90);
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+/* HERO BANNER BASE*/
+.hero-band {
+    position: relative;
+    width: 100vw;
+    height: 320px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    overflow: hidden;
+  
+    background-color: rgba(50, 50, 50, 0.6);
+  }
+  
+  /* PAGE-SPECIFIC HERO BACKGROUNDS */
+  
+  .about-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/nature/nature_3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .activities-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/activities/land/hillwalking_3.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .land-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/nature/nature_1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .rope-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/activities/rope/climbing_2.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .water-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/activities/water/powerboating_1.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .bookings-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/nature/nature_4.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .staff-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/nature/nature_2.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .contact-banner {
+    background-image:
+      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
+      url("../lochquarry_photographs/nature/nature_5.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* HERO TITLE */
+  .hero-title {
+    color: floralwhite;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 900;
+    z-index: 2;
+  }.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+  }
+  
+  .staff-card {
+    background-color: floralwhite;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    text-align: center;
+  }
+  
+  .staff-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .staff-role {
+    font-weight: bold;
+    color: rgb(130, 90, 90);
+  }
+  
+  .favourite {
+    font-style: italic;
+  }
+  .activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+  
+  .activity-card {
+    background-color: floralwhite;
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .activity-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .activity-card h3 {
+    margin-top: 15px;
+  }
