@@ -63,7 +63,6 @@
             <p class="review-author"> − Kelly, aged 9</p>
         </div>
 
-        <!-- External Link -->
         <h2>Find Out More</h2>
         <p>
             Find out the best seasons to visit on <a href="https://www.intrepidtravel.com/uk/scotland/scottish-highlands/best-time-to-visit-the-scottish-highlands" target="_blank">intrepid travel</a>, and don't forget to check the weather 
@@ -86,22 +85,33 @@
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
 
         <script>
-          document.addEventListener('DOMContentLoaded', function () {
-            const calendarEl = document.getElementById('calendar');
-            const message = document.getElementById('booking-message');
-        
-            const calendar = new FullCalendar.Calendar(calendarEl, {
-              initialView: 'dayGridMonth',
-              height: 'auto',
-              selectable: true,
-        
-              dateClick: function (info) {
-                message.textContent = `Selected booking date: ${info.dateStr}`;
-              }
+            document.addEventListener('DOMContentLoaded', function () {
+                const calendarEl = document.getElementById('calendar');
+                const message = document.getElementById('booking-message');
+                const confirmMsg = document.getElementById('booking-confirmation');
+                const acceptBtn = document.getElementById('accept-booking');
+            
+                const calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    height: 'auto',
+                    selectable: true,
+            
+                    dateClick: function (info) {
+                        message.textContent = `Selected booking date: ${info.dateStr}`;
+                    }
+                });
+            
+                calendar.render();
+            
+                acceptBtn.addEventListener('click', function () {
+                    if (message.textContent.includes("Selected booking date")) {
+                        confirmMsg.textContent = "Booking confirmed!";
+                    } else {
+                        confirmMsg.textContent = "Please select a date first.";
+                    }
+                });
             });
-        
-            calendar.render();
-          });
-        </script>
+            </script>            
+            
     </body>
 </html>
