@@ -56,16 +56,6 @@ a {
     font-weight: bold;
 }
 
-.hero-logo {
-    position: absolute;
-    top: 8vh;
-    height: 28vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    z-index: 10;
-}
-
 /* HERO IMAGE CONTAINER — FLEX, RESPONSIVE, CONSISTENT */
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
