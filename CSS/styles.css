@@ -58,97 +58,89 @@ a {
 
 .hero-logo {
     position: absolute;
-    top: 50px;              /* move UP by lowering this number */
+    top: 8vh;
+    height: 28vh;
     left: 50%;
     transform: translateX(-50%);
-    height: 300px;          /* controls logo size */
     width: auto;
     z-index: 10;
 }
 
+/* HERO IMAGE CONTAINER — FLEX, RESPONSIVE, CONSISTENT */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+                      url("../lochquarry_photographs/nature/nature_5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-height: 60vh;       /* grows if needed */
+    padding-top: 8vh;       /* space above logo */
+    padding-bottom: 10vh;   /* space below text/button */
+    position: relative;
+}
+
+/* HERO LOGO — NO ABSOLUTE POSITIONING */
+.hero-logo {
+    height: 28vh;           /* scales with screen height */
+    width: auto;
+    margin-bottom: 4vh;     /* consistent spacing before title */
+    position: relative;
+}
+
 .hero-logo img {
+    height: 100%;
+    width: auto;
+    transition: opacity 0.3s ease-in-out;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100%;
-    width: auto;
-    transition: opacity 0.3s ease-in-out;
 }
 
-/* Default: dark mountains visible */
-.hero-logo-default {
-    opacity: 0.8;
-}
+.hero-logo-default { opacity: 0.8; }
+.hero-logo-hover  { opacity: 0; }
 
-/* Hover version hidden initially */
-.hero-logo-hover {
-    opacity: 0;
-}
+.hero-logo:hover .hero-logo-default { opacity: 0; }
+.hero-logo:hover .hero-logo-hover  { opacity: 0.8; }
 
-/* Swap on hover */
-.hero-logo:hover .hero-logo-default {
-    opacity: 0;
-}
-
-.hero-logo:hover .hero-logo-hover {
-    opacity: 0.8;
-}
-
-
-/* The hero image */
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../lochquarry_photographs/nature/nature_5.jpg");
-    height: 60%;
-  
-    /* Position and center the image to scale nicely on all screens */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.hero-title {
-    color: floralwhite;
-    margin-top: 15px;
-    text-align: center;
-    font-weight: 900;
-    z-index: 2;
-  }
-  
+/* HERO TEXT — NATURAL FLOW, NO ABSOLUTE POSITIONING */
 .hero-text {
     text-align: center;
-    position: absolute;
-    top: 58%;                 /* was 50% — moves title DOWN */
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: floralwhite;
+    margin-top: 2vh;        /* spacing below logo */
 }
 
+.hero-text h1,
+.hero-text h2 {
+    margin: 0.5rem 0;
+}
+
+/* BUTTON */
 .hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: #ec674f;
-  background-color:floralwhite;
-  text-align: center;
-  cursor: pointer;
-  font-family: Garamond, Georgia, Cambria, Cochin;
-  font-size: large;
-  font-weight: bolder;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: #ec674f;
+    background-color: floralwhite;
+    text-align: center;
+    cursor: pointer;
+    font-family: Garamond, Georgia, Cambria, Cochin;
+    font-size: large;
+    font-weight: bolder;
+    margin-top: 1rem;
 }
 
 .hero-text button:hover {
-  background-color: #ec674f;
-  color: floralwhite;
-  font-family: Garamond, Georgia, Cambria, Cochin;
-}
-
-.hero-text button:hover a {
+    background-color: #ec674f;
     color: floralwhite;
 }
-
   
 /* NAV BAR */
 .topnav {
