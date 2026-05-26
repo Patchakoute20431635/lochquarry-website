@@ -56,41 +56,38 @@ a {
     font-weight: bold;
 }
 
-/* HERO IMAGE CONTAINER — FLEX, RESPONSIVE, CONSISTENT */
+
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-                      url("../lochquarry_photographs/nature/nature_5.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    min-height: 60vh;       /* grows if needed */
-    padding-top: 8vh;       /* space above logo */
-    padding-bottom: 10vh;   /* space below text/button */
-    position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+    url("../lochquarry_photographs/nature/nature_5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 40vh;
+  padding-top: 8vh;
+  padding-bottom: 10vh;
+  position: relative;
 }
 
-/* HERO LOGO — NO ABSOLUTE POSITIONING */
 .hero-logo {
-    height: 28vh;           /* scales with screen height */
-    width: auto;
-    margin-bottom: 4vh;     /* consistent spacing before title */
-    position: relative;
+  height: 28vh;
+  width: auto;
+  margin-bottom: 4vh;
+  position: relative;
 }
 
 .hero-logo img {
-    height: 100%;
-    width: auto;
-    transition: opacity 0.3s ease-in-out;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  height: 100%;
+  width: auto;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero-logo-default { opacity: 0.8; }
@@ -99,11 +96,10 @@ a {
 .hero-logo:hover .hero-logo-default { opacity: 0; }
 .hero-logo:hover .hero-logo-hover  { opacity: 0.8; }
 
-/* HERO TEXT — NATURAL FLOW, NO ABSOLUTE POSITIONING */
 .hero-text {
-    text-align: center;
-    color: floralwhite;
-    margin-top: 2vh;        /* spacing below logo */
+  text-align: center;
+  color: floralwhite;
+  margin-top: 2vh;
 }
 
 .hero-text h1,
@@ -111,7 +107,6 @@ a {
     margin: 0.5rem 0;
 }
 
-/* BUTTON */
 .hero-text button {
     border: none;
     outline: 0;
@@ -131,18 +126,16 @@ a {
     background-color: #ec674f;
     color: floralwhite;
 }
-  
-/* NAV BAR */
+
 .topnav {
   background-color: #333;
-  overflow: visible;        /* allow dropdown to extend */
-  height: 50px;             /* prevents collapse when floats are used */
-  line-height: 50px;        /* vertically centers text */
+  overflow: visible;
+  height: 50px;
+  line-height: 50px;
   position: relative;
   text-align: center;
 }
 
-/* Top-level nav links */
 .topnav > a:not(.logo) {
   display: inline-block;
   color: floralwhite;
@@ -156,10 +149,10 @@ a {
     display: inline-block;
     height: 50px;
     line-height: 50px;
-    padding: 0 25px 0 40px; /* adjust these numbers */
+    padding: 0 25px 0 40px;
     position: relative;
     vertical-align: middle;
-    background-color: transparent; /* ensures hover background works */
+    background-color: transparent;
 }
 
 .logo img {
@@ -167,7 +160,7 @@ a {
     width: auto;
     position: absolute;
     top: 50%;
-    right: 10px;                 /* anchor inside padding */
+    right: 10px;
     transform: translate(0, -50%);
     transition: opacity 0.2s ease-in-out;
 }
@@ -178,25 +171,22 @@ a {
 .logo:hover .logo-default { opacity: 0; }
 .logo:hover .logo-hover { opacity: 1; }
 
-/* Dropdown container */
 .dropdown {
-  display: inline-block;    /* sits in line with other links */
+  display: inline-block;
   position: relative;
-  vertical-align: middle;   /* fixes alignment */
+  vertical-align: middle;
 }
 
-/* Dropdown button (Activities) */
 .dropdown > a {
-  display: inline-block;    /* remove float */
+  display: inline-block;
   color: floralwhite;
   padding: 0 16px;
   text-decoration: none;
   font-size: 17px;
 }
 
-/* Dropdown panel */
 .dropdown-content {
-  display: none;            /* FIXED: no longer always visible */
+  display: none; 
   position: absolute;
   top: 48px;                
   left: 0;
@@ -206,7 +196,6 @@ a {
   z-index: 999;
 }
 
-/* Dropdown links */
 .dropdown-content a {
   display: block;
   padding: 12px 16px;
@@ -215,7 +204,6 @@ a {
   line-height: normal;
 }
 
-/* Hover behaviour */
 .topnav a:hover,
 .dropdown:hover > a {
     background-color: floralwhite;
@@ -227,7 +215,6 @@ a {
   color: floralwhite;
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -260,7 +247,7 @@ a {
 }
 
 .panel:hover {
-    flex: 2; /* expands the hovered panel */
+    flex: 2;
 }
 
 .panel::before {
@@ -276,7 +263,7 @@ a {
 }
 
 .panel:hover::before {
-    transform: scale(1.1); /* zoom effect */
+    transform: scale(1.1);
 }
 
 .panel-title {
@@ -289,7 +276,6 @@ a {
     z-index: 2;
 }
 
-/* Background images */
 .panel.land::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5)),url("../lochquarry_photographs/nature/nature_1.jpg");
 }
@@ -303,10 +289,10 @@ a {
 }
 .page-logo {
     position: relative;
-    z-index: 2;          /* ensures logo is ABOVE banner */
+    z-index: 2;
     width: 220px;
     height: 220px;
-    margin: 0;           /* CRITICAL: banner controls spacing */
+    margin: 0;
 }
 
 .page-logo img {
@@ -366,12 +352,10 @@ a {
     font-family: Garamond, Georgia, Cambria, Cochin;
   }
   
-  /* Calendar day cells */
   .fc-daygrid-day {
     cursor: pointer;
   }
   
-  /* Selected look */
   .fc-daygrid-day.fc-day-today {
     background-color: rgba(130, 90, 90, 0.15);
   }
@@ -411,7 +395,6 @@ a {
     margin-top: 15px;
   }
 
-/* HERO BANNER BASE*/
 .hero-band {
     position: relative;
     width: 100vw;
@@ -426,8 +409,6 @@ a {
   
     background-color: rgba(50, 50, 50, 0.6);
   }
-  
-  /* PAGE-SPECIFIC HERO BACKGROUNDS */
   
   .about-banner {
     background-image:
@@ -493,7 +474,6 @@ a {
     background-position: center;
   }
   
-  /* HERO TITLE */
   .hero-title {
     color: floralwhite;
     margin-top: 15px;
