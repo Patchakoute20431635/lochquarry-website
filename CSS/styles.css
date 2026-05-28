@@ -58,7 +58,7 @@ a {
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
-    url("../lochquarry_photographs/nature/nature_5.jpg");
+    url("../lochquarry_photographs/nature/nature_4.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -452,7 +452,7 @@ a {
   .bookings-banner {
     background-image:
       linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
-      url("../lochquarry_photographs/nature/nature_4.jpg");
+      url("../lochquarry_photographs/nature/nature_5.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -461,14 +461,6 @@ a {
     background-image:
       linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
       url("../lochquarry_photographs/nature/nature_2.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .contact-banner {
-    background-image:
-      linear-gradient(rgba(50,50,50,0.6), rgba(50,50,50,0.6)),
-      url("../lochquarry_photographs/nature/nature_5.jpg");
     background-size: cover;
     background-position: center;
   }
